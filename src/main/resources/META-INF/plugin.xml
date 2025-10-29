@@ -1,0 +1,35 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>dev.marko.ai-exception-detection</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
+    <name>AI exception simplify</name>
+    <vendor email="marecevrljakovic@gmail.com">Marko</vendor>
+
+       <description><![CDATA[
+       Plugin for simplifying exception with a help of OpenAI LLM<br>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+
+    <actions>
+        <action id="AiExceptionAdvisor"
+                class="dev.marko.aiexceptiondetection.AiAction"
+                text="Analyze Exception with AI"
+                description="Get AI suggestions for fixing an exception">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+
+
+    </extensions>
+</idea-plugin>
